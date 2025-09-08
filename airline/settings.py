@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-l1licswe3@3ohtv4-$y(yy3d1@50^6)$35r16c7d$6w9$xs1#9'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = os.environ.get('DEBUG', 'True') == 'True'
 SECRET_KEY = os.environ.get.('DJANGO_SECRET_KEY', 'default-key')
 
 ALLOWED_HOSTS = ['*']
@@ -79,7 +79,7 @@ WSGI_APPLICATION = 'airline.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-if not os.environ.get('DEBUG', 'False') == 'True'
+if not os.environ.get('DEBUG', 'True') == 'True'
     DATABASE = {
         'default' : dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
